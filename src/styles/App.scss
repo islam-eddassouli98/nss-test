@@ -1,0 +1,21 @@
+//Utilities
+@import "utilities/variables";
+
+//Base
+@import "./Header.scss";
+@import "./Hero.scss";
+@import "./Doubletext.scss";
+@import "./Textimage.scss";
+@import "./Titleslider.scss";
+@import "./Discovery.scss";
+@import "./Getintouch.scss";
+@import "./Footer.scss";
+
+
+//CSS CODE
+
+body{
+    margin:0;
+    overflow-x: hidden;
+    font-family: 'Playfair Display', serif;
+}

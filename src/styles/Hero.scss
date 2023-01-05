@@ -1,0 +1,134 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    color: $white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+   
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      margin-bottom: 10px;
+      @media (max-width: $laptop-breakpoint) {
+        font-size: 14px;
+      }
+     
+    }
+    h1 {
+      margin: 0;
+      font-size: 60px;
+      font-weight: 400;
+      text-align: center;
+      max-width: 650px;
+      position: relative;
+     
+      @media (max-width: $laptop-breakpoint) {
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    button {
+      cursor: pointer;
+      padding: 20px 70px;
+      background: transparent;
+      border: 1px solid $brownie;
+      color: $brownie;
+      font-size: 15px;
+      &:hover {
+        background-color: $white;
+        color: $black;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+  @media (min-width: $laptop-breakpoint) {
+    &__next__mobile {
+      display: none;
+    }
+    &__next {
+      cursor: pointer;
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      bottom: 0px;
+      right: 5%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      &:hover {
+        transition: 0.4s ease-in-out;
+        background-size: 110%;
+        h3 {
+          font-size: 25px;
+          transition: 0.4s ease-in-out;
+          max-width: 80%;
+        }
+        h4 {
+          font-family: "Montserrat", sans-serif;
+          &::after {
+            transition: 0.4s ease-in-out;
+            left: 0;
+            opacity: 1;
+          }
+        }
+      }
+
+      h3 {
+        flex: 1;
+        color: $white;
+        font-weight: 200;
+        font-size: 18px;
+        max-width: 60%;
+        height: 50%;
+        margin: 30px 30px;
+        height: 50%;
+      }
+      h4 {
+        flex: 1;
+        color: $white;
+        text-align: end;
+        margin-right: 20px;
+        font-family: "Montserrat", sans-serif;
+        &::after {
+          position: relative;
+          transition: 0.4s ease-in-out;
+          left: 20px;
+          content: " > > ";
+          opacity: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: $laptop-breakpoint) {
+    &__next {
+      display: none;
+    }
+    &__next__mobile {
+      position: absolute;
+      bottom: 0px;
+      right: 5%;
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        color: $white;
+        text-align: end;
+        margin-right: 20px;
+      }
+    }
+  }
+}

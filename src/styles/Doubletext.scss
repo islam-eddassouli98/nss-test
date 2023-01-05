@@ -1,0 +1,40 @@
+.double {
+  &__title {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @media (max-width: $laptop-breakpoint) {
+      flex-flow: column;
+      text-align: center;
+    }
+    &__left,
+    &__rigth {
+      width: 50%;
+      @media (max-width: $laptop-breakpoint) {
+        width: 100%;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        margin: 2% 4% 0%;
+        font-size: 60px;
+        font-weight: 400;
+        padding: 20px;
+        @media (max-width: $laptop-breakpoint) {
+          font-size: 40px;
+        }
+      }
+      p {
+        font-family: "Merriweather", serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px;
+        color: $grey;
+        margin: 5% 4%;
+        line-height: 2em;
+      }
+    }
+  }
+}
